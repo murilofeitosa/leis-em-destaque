@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jurisprudência em Destaque</title>
+    <title>Disposições Legais em Destaque</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Leis e Artigos Jurídicos em Destaque</h1>
-        <p>A cada 10 segundos, uma nova disposição importante do nosso ordenamento jurídico será exibida.</p>
+        <i class="fas fa-gavel header-icon"></i>
+        <h1>Constituição e Leis em Destaque</h1>
+        <p>A cada 30 segundos, uma nova disposição importante do nosso ordenamento jurídico será exibida.</p>
     </header>
 
     <main>
         <div id="display-lei" class="lei-card">
             <h2 id="lei-titulo">Carregando...</h2>
             <p id="lei-texto">Aguarde, buscando o texto da lei importante.</p>
-            <a id="lei-link" href="#" target="_blank" class="leia-mais">Leia na Íntegra (Planalto)</a>
+            <a id="lei-link" href="#" target="_blank" class="leia-mais">
+                <i class="fas fa-book-open"></i> Leia na Íntegra (Planalto)
+            </a>
         </div>
     </main>
 
     <footer>
-        <p>Projeto rodando via GitHub Pages</p>
+        <p>Desenvolvido por Murilo Feitosa | Projeto rodando via GitHub Pages</p>
     </footer>
 
     <script src="script.js"></script>
