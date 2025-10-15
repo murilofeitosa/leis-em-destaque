@@ -61,5 +61,5 @@ function exibirLei() {
 // 1. Executa a função imediatamente ao carregar
 exibirLei();
 
-// 2. Configura a execução periódica a cada 10 segundos (10000 milissegundos)
-setInterval(exibirLei, 10000);
+// 2. Configura a execução periódica a cada 30 segundos (30000 milissegundos)
+setInterval(exibirLei, 30000);
