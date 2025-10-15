@@ -1,0 +1,32 @@
+[
+    {
+      "titulo": "Constituição Federal - Art. 5º, Caput (Direitos Fundamentais)",
+      "texto": "Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade...",
+      "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+    },
+    {
+      "titulo": "Constituição Federal - Art. 37 (Princípios da Administração Pública)",
+      "texto": "A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte: ...",
+      "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37"
+    },
+    {
+      "titulo": "Código Penal - Art. 121 (Homicídio)",
+      "texto": "Matar alguém: Pena - reclusão, de seis a vinte anos.",
+      "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+    },
+    {
+      "titulo": "CLT - Art. 7º, XIII (Jornada de Trabalho)",
+      "texto": "Duração do trabalho normal não superior a oito horas diárias e quarenta e quatro semanais, facultada a compensação de horários e a redução da jornada, mediante acordo ou convenção coletiva de trabalho.",
+      "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+    },
+    {
+      "titulo": "Código de Defesa do Consumidor - Art. 6º (Direitos Básicos do Consumidor)",
+      "texto": "São direitos básicos do consumidor: I - a proteção da vida, saúde e segurança contra os riscos provocados por práticas no fornecimento de produtos e serviços considerados perigosos ou nocivos; II - a educação e divulgação sobre o consumo adequado dos produtos e serviços, asseguradas a liberdade de escolha e a igualdade nas contratações; ...",
+      "link": "http://www.planalto.gov.br/ccivil_03/leis/l8078.htm"
+    },
+    {
+      "titulo": "Estatuto da Criança e do Adolescente (ECA) - Art. 4º (Dever Familiar e Estatal)",
+      "texto": "É dever da família, da comunidade, da sociedade em geral e do poder público assegurar, com absoluta prioridade, a efetivação dos direitos referentes à vida, à saúde, à alimentação, à educação, ao esporte, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária.",
+      "link": "http://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+    }
+]
