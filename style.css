@@ -1,7 +1,10 @@
+/* Importação de fonte mais formal (opcional, se quiser uma fonte diferente da padrão do sistema) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    font-family: 'Roboto', sans-serif; /* Fonte limpa para corpo do texto */
+    background-color: #f0f2f5; /* Fundo cinza claro */
+    color: #2c3e50; /* Texto em azul marinho escuro */
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,69 +14,96 @@ body {
 }
 
 header {
-    background-color: #004d40; /* Verde escuro */
+    background-color: #34495e; /* Azul Marinho Escuro */
     color: white;
-    padding: 20px;
+    padding: 25px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-icon {
+    font-size: 3em;
+    color: #f39c12; /* Dourado/Âmbar para destaque */
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif; /* Fonte mais séria para o título */
+    margin: 5px 0 10px 0;
+}
+
+header p {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
 main {
     flex-grow: 1;
     width: 90%;
-    max-width: 800px;
-    padding: 20px 0;
+    max-width: 900px;
+    padding: 30px 0;
 }
 
 .lei-card {
     background-color: white;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #009688; /* Destaque lateral */
-    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #3498db; /* Azul Claro/Institucional */
+    transition: all 0.5s ease-in-out;
+    opacity: 1; /* Ponto inicial para a transição do JS */
 }
 
-.lei-card:hover {
-    transform: translateY(-5px);
+/* Transição de opacidade para o JS (para um efeito suave ao trocar a lei) */
+.lei-card[style*="opacity: 0"] {
+    transition: opacity 0.3s ease-in-out;
 }
 
 #lei-titulo {
-    color: #004d40;
-    font-size: 1.8em;
+    color: #34495e;
+    font-size: 2em;
     margin-top: 0;
-    border-bottom: 2px solid #e0f2f1;
-    padding-bottom: 10px;
+    border-bottom: 3px dashed #ecf0f1; /* Linha de separação discreta */
+    padding-bottom: 15px;
+    font-weight: 700;
 }
 
 #lei-texto {
-    font-size: 1.1em;
-    line-height: 1.6;
-    white-space: pre-wrap; /* Mantém a formatação de quebra de linha se houver */
+    font-family: 'Merriweather', serif;
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin: 25px 0;
+    text-align: justify;
+    white-space: pre-wrap;
 }
 
 .leia-mais {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #009688;
+    padding: 12px 20px;
+    background-color: #3498db; /* Azul Institucional */
     color: white;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    border-radius: 50px; /* Botão arredondado */
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .leia-mais:hover {
-    background-color: #00796b;
+    background-color: #2980b9;
+    transform: translateY(-2px);
 }
 
 footer {
     width: 100%;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #eee;
-    color: #666;
+    padding: 15px;
+    margin-top: 40px;
+    background-color: #ecf0f1; /* Cinza claro suave */
+    color: #7f8c8d; /* Cinza escuro discreto */
     border-top: 1px solid #ddd;
+    font-size: 0.9em;
 }
