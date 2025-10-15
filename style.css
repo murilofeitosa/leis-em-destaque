@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #004d40; /* Verde escuro */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px 0;
+}
+
+.lei-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #009688; /* Destaque lateral */
+    transition: transform 0.3s ease-in-out;
+}
+
+.lei-card:hover {
+    transform: translateY(-5px);
+}
+
+#lei-titulo {
+    color: #004d40;
+    font-size: 1.8em;
+    margin-top: 0;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 10px;
+}
+
+#lei-texto {
+    font-size: 1.1em;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Mantém a formatação de quebra de linha se houver */
+}
+
+.leia-mais {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #009688;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.leia-mais:hover {
+    background-color: #00796b;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #eee;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
