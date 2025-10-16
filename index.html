@@ -11,16 +11,26 @@
     <header>
         <i class="fas fa-gavel header-icon"></i>
         <h1>Constituição e Leis em Destaque</h1>
-        <p>A cada 30 segundos, uma nova disposição importante do nosso ordenamento jurídico será exibida.</p>
+        <p>A cada 30 segundos, uma nova disposição importante será exibida. Use os controles abaixo para pausar ou navegar.</p>
     </header>
 
     <main>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
         <div id="display-lei" class="lei-card">
             <h2 id="lei-titulo">Carregando...</h2>
             <p id="lei-texto">Aguarde, buscando o texto da lei importante.</p>
             <a id="lei-link" href="#" target="_blank" class="leia-mais">
                 <i class="fas fa-book-open"></i> Leia na Íntegra (Planalto)
             </a>
+        </div>
+
+        <div class="navigation-controls">
+            <button id="btn-anterior" class="nav-btn"><i class="fas fa-chevron-left"></i> Anterior</button>
+            <button id="btn-play-pause" class="nav-btn pause"><i class="fas fa-pause"></i> Pausar</button>
+            <button id="btn-proximo" class="nav-btn">Próximo <i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
 
