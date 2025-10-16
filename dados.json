@@ -1,32 +1,269 @@
 [
     {
-      "titulo": "Constituição Federal - Art. 5º, Caput (Direitos Fundamentais)",
-      "texto": "Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade...",
-      "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        "titulo": "CF/88 - Art. 1º (Fundamentos da República)",
+        "texto": "A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos: I - a soberania; II - a cidadania; III - a dignidade da pessoa humana; IV - os valores sociais do trabalho e da livre iniciativa; V - o pluralismo político.",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art1"
     },
     {
-      "titulo": "Constituição Federal - Art. 37 (Princípios da Administração Pública)",
-      "texto": "A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte: ...",
-      "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37"
+        "titulo": "CF/88 - Art. 5º, Caput (Direitos Fundamentais)",
+        "texto": "Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade...",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5"
     },
     {
-      "titulo": "Código Penal - Art. 121 (Homicídio)",
-      "texto": "Matar alguém: Pena - reclusão, de seis a vinte anos.",
-      "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        "titulo": "CF/88 - Art. 5º, XI (Inviolabilidade do Domicílio)",
+        "texto": "a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial;",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5xi"
     },
     {
-      "titulo": "CLT - Art. 7º, XIII (Jornada de Trabalho)",
-      "texto": "Duração do trabalho normal não superior a oito horas diárias e quarenta e quatro semanais, facultada a compensação de horários e a redução da jornada, mediante acordo ou convenção coletiva de trabalho.",
-      "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+        "titulo": "CF/88 - Art. 5º, XXXV (Acesso à Justiça)",
+        "texto": "a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito;",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5xxxv"
     },
     {
-      "titulo": "Código de Defesa do Consumidor - Art. 6º (Direitos Básicos do Consumidor)",
-      "texto": "São direitos básicos do consumidor: I - a proteção da vida, saúde e segurança contra os riscos provocados por práticas no fornecimento de produtos e serviços considerados perigosos ou nocivos; II - a educação e divulgação sobre o consumo adequado dos produtos e serviços, asseguradas a liberdade de escolha e a igualdade nas contratações; ...",
-      "link": "http://www.planalto.gov.br/ccivil_03/leis/l8078.htm"
+        "titulo": "CF/88 - Art. 5º, LXVIII (Habeas Corpus)",
+        "texto": "conceder-se-á habeas corpus sempre que alguém sofrer ou se achar na iminência de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder;",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5lxviii"
     },
     {
-      "titulo": "Estatuto da Criança e do Adolescente (ECA) - Art. 4º (Dever Familiar e Estatal)",
-      "texto": "É dever da família, da comunidade, da sociedade em geral e do poder público assegurar, com absoluta prioridade, a efetivação dos direitos referentes à vida, à saúde, à alimentação, à educação, ao esporte, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária.",
-      "link": "http://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+        "titulo": "CF/88 - Art. 37 (Princípios da Adm. Pública - LIMPE)",
+        "texto": "A administração pública direta e indireta... obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência...",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37"
+    },
+    {
+        "titulo": "CF/88 - Art. 40 (Regime Próprio de Previdência)",
+        "texto": "O regime próprio de previdência social dos servidores titulares de cargos efetivos terá caráter contributivo e solidário, mediante contribuição do respectivo ente federativo, de servidores ativos, de aposentados e de pensionistas...",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art40"
+    },
+    {
+        "titulo": "CF/88 - Art. 61, § 1º (Iniciativa Privativa do PR)",
+        "texto": "São de iniciativa privativa do Presidente da República as leis que: I - fixem ou modifiquem os efetivos das Forças Armadas; II - disponham sobre: a) criação de cargos, funções ou empregos públicos na administração direta e autárquica...",
+        "link": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art61"
+    },
+    {
+        "titulo": "Código Civil (CC) - Art. 104 (Validade do Negócio Jurídico)",
+        "texto": "A validade do negócio jurídico requer: I - agente capaz; II - objeto lícito, possível, determinado ou determinável; III - forma prescrita ou não defesa em lei.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm#art104"
+    },
+    {
+        "titulo": "CC - Art. 186 (Ato Ilícito)",
+        "texto": "Aquele que, por ação ou omissão voluntária, negligência ou imprudência, violar direito e causar dano a outrem, ainda que exclusivamente moral, comete ato ilícito.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm#art186"
+    },
+    {
+        "titulo": "CC - Art. 421 (Liberdade de Contratar)",
+        "texto": "A liberdade contratual será exercida nos limites da função social do contrato.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm#art421"
+    },
+    {
+        "titulo": "CC - Art. 1.228 (Direito de Propriedade)",
+        "texto": "O proprietário tem a faculdade de usar, gozar e dispor da coisa, e o direito de reavê-la do poder de quem quer que injustamente a possua ou detenha.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm#art1228"
+    },
+    {
+        "titulo": "Código Penal (CP) - Art. 18 (Crime Doloso e Culposo)",
+        "texto": "Diz-se o crime: I - doloso, quando o agente quis o resultado ou assumiu o risco de produzi-lo; II - culposo, quando o agente deu causa ao resultado por imprudência, negligência ou imperícia.",
+        "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm#art18"
+    },
+    {
+        "titulo": "CP - Art. 121 (Homicídio Simples)",
+        "texto": "Matar alguém: Pena - reclusão, de seis a vinte anos.",
+        "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm#art121"
+    },
+    {
+        "titulo": "CP - Art. 155 (Furto)",
+        "texto": "Subtrair, para si ou para outrem, coisa alheia móvel: Pena - reclusão, de um a quatro anos, e multa.",
+        "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm#art155"
+    },
+    {
+        "titulo": "Código de Processo Penal (CPP) - Art. 5º (Princípio da Ação Penal)",
+        "texto": "Nos crimes de ação pública, o inquérito policial será iniciado: I - de ofício; II - mediante requisição da autoridade judiciária ou do Ministério Público; III - mediante requerimento do ofendido ou de quem tiver qualidade para representá-lo.",
+        "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm#art5"
+    },
+    {
+        "titulo": "CLT - Art. 7º, XIII (Jornada de Trabalho)",
+        "texto": "Duração do trabalho normal não superior a oito horas diárias e quarenta e quatro semanais, facultada a compensação de horários e a redução da jornada, mediante acordo ou convenção coletiva de trabalho.",
+        "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm#art7xiii"
+    },
+    {
+        "titulo": "CLT - Art. 468 (Alteração do Contrato de Trabalho)",
+        "texto": "Nos contratos individuais de trabalho só é lícita a alteração das respectivas condições por mútuo consentimento, e ainda assim desde que não resultem, direta ou indiretamente, prejuízos ao empregado...",
+        "link": "http://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm#art468"
+    },
+    {
+        "titulo": "CDC - Art. 2º (Conceito de Consumidor)",
+        "texto": "Consumidor é toda pessoa física ou jurídica que adquire ou utiliza produto ou serviço como destinatário final.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm#art2"
+    },
+    {
+        "titulo": "CDC - Art. 6º (Direitos Básicos do Consumidor)",
+        "texto": "São direitos básicos do consumidor: I - a proteção da vida, saúde e segurança contra os riscos provocados por práticas no fornecimento de produtos e serviços considerados perigosos ou nocivos; II - a educação e divulgação sobre o consumo adequado...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm#art6"
+    },
+    {
+        "titulo": "Lei 8.429/92 - Art. 9º (Improbidade - Enriquecimento Ilícito)",
+        "texto": "Constitui ato de improbidade administrativa importando em enriquecimento ilícito auferir qualquer tipo de vantagem patrimonial indevida em razão do exercício de cargo, de mandato, de função, de emprego ou de atividade nas entidades mencionadas no art. 1º desta Lei.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8429.htm#art9"
+    },
+    {
+        "titulo": "Lei 8.666/93 - Art. 3º (Princípios da Licitação)",
+        "texto": "A licitação destina-se a garantir a observância do princípio constitucional da isonomia, a seleção da proposta mais vantajosa para a administração e a promoção do desenvolvimento nacional sustentável...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8666.htm#art3"
+    },
+    {
+        "titulo": "Lei 9.784/99 - Art. 2º (Princípios do Processo Administrativo)",
+        "texto": "A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9784.htm#art2"
+    },
+    {
+        "titulo": "Lei 13.105/15 (CPC) - Art. 3º (Conciliação e Mediação)",
+        "texto": "Não se excluirá da apreciação jurisdicional ameaça ou lesão a direito. § 2º O Estado promoverá, sempre que possível, a solução consensual dos conflitos. § 3º A conciliação, a mediação e outros métodos de solução consensual de conflitos deverão ser estimulados por juízes, advogados, defensores públicos e membros do Ministério Público.",
+        "link": "http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm#art3"
+    },
+    {
+        "titulo": "CTN - Art. 3º (Conceito de Tributo)",
+        "texto": "Tributo é toda prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída em lei e cobrada mediante atividade administrativa plenamente vinculada.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm#art3"
+    },
+    {
+        "titulo": "Lei 8.069/90 (ECA) - Art. 4º (Dever Familiar e Estatal)",
+        "texto": "É dever da família, da comunidade, da sociedade em geral e do poder público assegurar, com absoluta prioridade, a efetivação dos direitos referentes à vida, à saúde, à alimentação, à educação, ao esporte, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8069.htm#art4"
+    },
+    {
+        "titulo": "Lei 10.741/03 (Estatuto do Idoso) - Art. 3º (Prioridade Absoluta)",
+        "texto": "A obrigação de assegurar à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas, é de responsabilidade da família, da comunidade, da sociedade e do Poder Público.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/2003/l10741.htm#art3"
+    },
+    {
+        "titulo": "Lei 9.613/98 (Lavagem de Dinheiro) - Art. 1º",
+        "texto": "Ocultar ou dissimular a natureza, origem, localização, disposição, movimentação ou propriedade de bens, direitos ou valores provenientes, direta ou indiretamente, de infração penal. Pena: reclusão, de 3 a 10 anos, e multa.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9613.htm#art1"
+    },
+    {
+        "titulo": "Lei 8.906/94 (Estatuto da OAB) - Art. 2º (Advogado)",
+        "texto": "O advogado é indispensável à administração da justiça.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8906.htm#art2"
+    },
+    {
+        "titulo": "Lei 13.709/18 (LGPD) - Art. 6º (Princípios)",
+        "texto": "As atividades de tratamento de dados pessoais deverão observar a boa-fé e os seguintes princípios: I - finalidade; II - adequação; III - necessidade; IV - livre acesso; V - qualidade dos dados; VI - transparência; VII - segurança; VIII - prevenção; IX - não discriminação; X - responsabilização e prestação de contas.",
+        "link": "http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6"
+    },
+    {
+        "titulo": "Lei 12.846/13 (Lei Anticorrupção) - Art. 5º",
+        "texto": "Constituem atos lesivos à administração pública, nacional ou estrangeira, para os fins desta Lei, todos aqueles praticados pelas pessoas jurídicas que atentem contra o patrimônio público nacional ou estrangeiro, contra os princípios da administração pública ou contra os compromissos internacionais assumidos pelo Brasil.",
+        "link": "http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm#art5"
+    },
+    {
+        "titulo": "Lei 4.737/65 (Código Eleitoral) - Art. 222",
+        "texto": "É proibido o voto de cabresto, o uso de violência ou ameaça contra eleitor, o pagamento de propina e o uso de meios fraudulentos para desvirtuar ou impedir o voto.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l4737.htm#art222"
+    },
+    {
+        "titulo": "Lei 9.503/97 (CTB) - Art. 26 (Normas de Circulação)",
+        "texto": "Os usuários das vias terrestres devem: I - abster-se de todo ato que possa constituir perigo ou obstáculo para o trânsito de veículos, de pessoas ou de animais, ou causar danos a propriedades públicas ou privadas...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9503.htm#art26"
+    },
+    {
+        "titulo": "Lei 10.259/01 (Juizados Especiais Federais) - Art. 1º",
+        "texto": "Os Juizados Especiais Cíveis e Criminais da Justiça Federal, criados por esta Lei, destinam-se a processar e julgar causas de competência da Justiça Federal até o valor de sessenta salários mínimos, bem como as infrações penais de menor potencial ofensivo.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l10259.htm#art1"
+    },
+    {
+        "titulo": "Lei 9.099/95 (Juizados Especiais Cíveis) - Art. 2º (Princípios)",
+        "texto": "O processo orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, buscando, sempre que possível, a conciliação ou a transação.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9099.htm#art2"
+    },
+    {
+        "titulo": "Lei 10.833/03 - Art. 15 (Retenção na Fonte - PIS/COFINS/CSLL)",
+        "texto": "Os pagamentos efetuados pelas pessoas jurídicas a outras pessoas jurídicas de direito privado, pela prestação de serviços de limpeza, conservação, segurança, vigilância, transportes de valores e locação de mão-de-obra, sujeitam-se à retenção na fonte da Contribuição Social sobre o Lucro Líquido (CSLL), da Contribuição para o PIS/PASEP e da COFINS.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l10833.htm#art15"
+    },
+    {
+        "titulo": "Lei 6.015/73 (Registros Públicos) - Art. 1º",
+        "texto": "Os serviços concernentes aos Registros Públicos, estabelecidos pela legislação civil para autenticidade, segurança e eficácia dos atos jurídicos, ficam sujeitos ao regime estabelecido nesta Lei.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm#art1"
+    },
+    {
+        "titulo": "Lei 7.716/89 (Lei do Crime Racial) - Art. 1º",
+        "texto": "Serão punidos, na forma desta Lei, os crimes resultantes de discriminação ou preconceito de raça, cor, etnia, religião ou procedência nacional.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l7716.htm#art1"
+    },
+    {
+        "titulo": "Lei 11.340/06 (Lei Maria da Penha) - Art. 5º (Violência Doméstica)",
+        "texto": "Para os efeitos desta Lei, configura violência doméstica e familiar contra a mulher qualquer ação ou omissão baseada no gênero que lhe cause morte, lesão, sofrimento físico, sexual ou psicológico e dano moral ou patrimonial.",
+        "link": "http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm#art5"
+    },
+    {
+        "titulo": "Lei 12.527/11 (LAI) - Art. 3º (Diretrizes)",
+        "texto": "Os procedimentos previstos nesta Lei destinam-se a assegurar o direito fundamental de acesso à informação e devem ser executados em conformidade com os princípios básicos da administração pública e com as seguintes diretrizes: I - observância da publicidade como preceito geral...",
+        "link": "http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm#art3"
+    },
+    {
+        "titulo": "Lei 8.078/90 (CDC) - Art. 42 (Cobrança de Dívidas)",
+        "texto": "Na cobrança de débitos, o consumidor inadimplente não será exposto a ridículo, nem será submetido a qualquer tipo de constrangimento ou ameaça.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm#art42"
+    },
+    {
+        "titulo": "Lei 8.245/91 (Lei do Inquilinato) - Art. 4º (Rescisão)",
+        "texto": "Durante o prazo estipulado para a duração do contrato, não poderá o locador reaver o imóvel alugado. O locatário, todavia, poderá devolvê-lo, pagando a multa pactuada, proporcionalmente ao período de cumprimento do contrato...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8245.htm#art4"
+    },
+    {
+        "titulo": "Lei 9.455/97 (Lei de Tortura) - Art. 1º",
+        "texto": "Constitui crime de tortura: I - constranger alguém com emprego de violência ou grave ameaça, causando-lhe sofrimento físico ou mental: a) com o fim de obter informação, declaração ou confissão da vítima ou de terceira pessoa; b) para provocar ação ou omissão de natureza criminosa; c) em razão de discriminação racial ou religiosa...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9455.htm#art1"
+    },
+    {
+        "titulo": "Lei 11.101/05 (Lei de Falências) - Art. 47 (Objetivo)",
+        "texto": "A recuperação judicial tem por objetivo viabilizar a superação da situação de crise econômico-financeira do devedor, a fim de permitir a manutenção da fonte produtora, do emprego dos trabalhadores e dos interesses dos credores, promovendo, assim, a preservação da empresa, sua função social e o estímulo à atividade econômica.",
+        "link": "http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm#art47"
+    },
+    {
+        "titulo": "Lei 5.172/66 (CTN) - Art. 142 (Lançamento)",
+        "texto": "Compete privativamente à autoridade administrativa constituir o crédito tributário pelo lançamento, assim entendido o procedimento administrativo tendente a verificar a ocorrência do fato gerador da obrigação correspondente, determinar a matéria tributável, calcular o montante do tributo devido, identificar o sujeito passivo e, sendo o caso, propor a aplicação da penalidade cabível.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm#art142"
+    },
+    {
+        "titulo": "Lei 8.112/90 (Regime Jurídico Servidor Público) - Art. 3º (Servidor)",
+        "texto": "Servidor público é a pessoa legalmente investida em cargo público.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm#art3"
+    },
+    {
+        "titulo": "Lei 10.826/03 (Estatuto do Desarmamento) - Art. 12",
+        "texto": "Possuir ou manter sob sua guarda arma de fogo, acessório ou munição, de uso permitido, em desacordo com determinação legal ou regulamentar, no interior de sua residência ou dependência desta, ou, ainda, no local de trabalho, desde que seja o titular ou o responsável legal do estabelecimento ou empresa: Pena - detenção, de 1 (um) a 3 (três) anos, e multa.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l10826.htm#art12"
+    },
+    {
+        "titulo": "Lei 8.080/90 (Lei Orgânica da Saúde) - Art. 2º",
+        "texto": "A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l8080.htm#art2"
+    },
+    {
+        "titulo": "Lei 4.591/64 (Lei de Condomínios) - Art. 9º",
+        "texto": "Os proprietários, promitentes compradores, cessionários ou promitentes cessionários dos direitos pertinentes à aquisição de unidades autônomas, em edificações a serem construídas, em construção ou já construídas, elaborarão, por escrito, a Convenção de condomínio...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l4591.htm#art9"
+    },
+    {
+        "titulo": "Lei 6.015/73 (Registros Públicos) - Art. 167 (Registro vs. Averbação)",
+        "texto": "É fundamental a distinção entre atos de registro (que criam, transferem ou extinguem direitos reais) e atos de averbação (que modificam, complementam ou retificam registros).",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm#art167"
+    },
+    {
+        "titulo": "Lei 9.279/96 (Lei da Propriedade Industrial) - Art. 129",
+        "texto": "A propriedade de marca adquire-se pelo registro validamente expedido, conforme as disposições desta Lei, sendo assegurado ao titular seu uso exclusivo em todo o território nacional, observado o disposto nos arts. 130 e 131.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9279.htm#art129"
+    },
+    {
+        "titulo": "Lei 9.605/98 (Lei de Crimes Ambientais) - Art. 29",
+        "texto": "Matar, perseguir, caçar, apanhar, utilizar espécimes da fauna silvestre, nativos ou em rota migratória, sem a devida permissão, licença ou autorização da autoridade competente, ou em desacordo com a obtida: Pena - detenção de seis meses a um ano, e multa.",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9605.htm#art29"
+    },
+    {
+        "titulo": "Lei 9.504/97 (Lei das Eleições) - Art. 14 (Condutas Vedadas)",
+        "texto": "São vedadas aos agentes públicos, servidores ou não, as seguintes condutas tendentes a afetar a igualdade de oportunidades entre candidatos nos pleitos eleitorais...",
+        "link": "http://www.planalto.gov.br/ccivil_03/leis/l9504.htm#art73"
     }
+    
+    // (Total: 50 itens)
 ]
