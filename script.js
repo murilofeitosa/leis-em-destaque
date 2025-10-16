@@ -1,65 +1,138 @@
-// A base de dados das Leis e Artigos importantes.
-// Você pode adicionar quantos itens quiser aqui!
-const leisImportantes = [
-  {
-    titulo: "Constituição Federal - Art. 5º, Caput (Direitos Fundamentais)",
-    texto: "Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade...",
-    link: "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
-  },
-  {
-    titulo: "Constituição Federal - Art. 37 (Princípios da Administração Pública)",
-    texto: "A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte: ...",
-    link: "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37"
-  },
-  {
-    titulo: "Código Penal - Art. 121 (Homicídio)",
-    texto: "Matar alguém: Pena - reclusão, de seis a vinte anos.",
-    link: "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
-  },
-  {
-    titulo: "CLT - Art. 7º, XIII (Jornada de Trabalho)",
-    texto: "Duração do trabalho normal não superior a oito horas diárias e quarenta e quatro semanais, facultada a compensação de horários e a redução da jornada, mediante acordo ou convenção coletiva de trabalho.",
-    link: "http://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
-  },
-  {
-    titulo: "Código de Defesa do Consumidor - Art. 6º (Direitos Básicos do Consumidor)",
-    texto: "São direitos básicos do consumidor: I - a proteção da vida, saúde e segurança contra os riscos provocados por práticas no fornecimento de produtos e serviços considerados perigosos ou nocivos; II - a educação e divulgação sobre o consumo adequado dos produtos e serviços, asseguradas a liberdade de escolha e a igualdade nas contratações; ...",
-    link: "http://www.planalto.gov.br/ccivil_03/leis/l8078.htm"
-  }
-];
+const INTERVALO_MILISSEGUNDOS = 30000; // 30 segundos
+let leisImportantes = [];
+let indiceAtual = 0;
+let intervaloTimer;
+let estaPausado = false;
 
-// Função para selecionar um item aleatório
-function selecionarLeiAleatoria() {
-  const indice = Math.floor(Math.random() * leisImportantes.length);
-  return leisImportantes[indice];
-}
+// Elementos DOM
+const tituloElemento = document.getElementById('lei-titulo');
+const textoElemento = document.getElementById('lei-texto');
+const linkElemento = document.getElementById('lei-link');
+const cardElemento = document.getElementById('display-lei');
+const progressBar = document.getElementById('progress-bar');
+const btnPlayPause = document.getElementById('btn-play-pause');
 
-// Função para atualizar a tela com a lei selecionada
-function exibirLei() {
-  const lei = selecionarLeiAleatoria();
-  
-  // Elementos HTML
-  const tituloElemento = document.getElementById('lei-titulo');
-  const textoElemento = document.getElementById('lei-texto');
-  const linkElemento = document.getElementById('lei-link');
-  const cardElemento = document.getElementById('display-lei');
+// --- 1. Funções de Exibição e Navegação ---
 
-  // Aplicar a classe de transição para o efeito visual de mudança
-  cardElemento.style.opacity = 0;
+function exibirLei(indice) {
+    if (!leisImportantes.length) return;
 
-  // Espera um momento (300ms) para a opacidade sumir antes de trocar o conteúdo
-  setTimeout(() => {
-    tituloElemento.textContent = lei.titulo;
-    textoElemento.textContent = lei.texto;
-    linkElemento.href = lei.link;
+    // Normaliza o índice (volta ao início ou fim da lista)
+    indiceAtual = (indice + leisImportantes.length) % leisImportantes.length;
+    const lei = leisImportantes[indiceAtual];
     
-    // Faz o novo conteúdo aparecer
-    cardElemento.style.opacity = 1;
-  }, 300);
+    // Efeito de transição suave
+    cardElemento.style.opacity = 0;
+
+    setTimeout(() => {
+        // Atualiza o conteúdo
+        tituloElemento.textContent = lei.titulo;
+        textoElemento.textContent = lei.texto;
+        linkElemento.href = lei.link;
+        cardElemento.style.opacity = 1;
+        
+        // Reinicia a barra de progresso se não estiver pausado
+        if (!estaPausado) {
+            iniciarProgressBar();
+        }
+
+    }, 300); // Tempo para a opacidade sumir
 }
 
-// 1. Executa a função imediatamente ao carregar
-exibirLei();
+function proximaLei() {
+    exibirLei(indiceAtual + 1);
+    reiniciarIntervalo();
+}
 
-// 2. Configura a execução periódica a cada 30 segundos (30000 milissegundos)
-setInterval(exibirLei, 30000);
+function leiAnterior() {
+    exibirLei(indiceAtual - 1);
+    reiniciarIntervalo();
+}
+
+// --- 2. Controle do Timer e Pausa ---
+
+function iniciarProgressBar() {
+    // Reset o estado visual da barra
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    
+    // Força o browser a aplicar o reset antes da próxima animação
+    requestAnimationFrame(() => {
+        progressBar.style.transition = `width ${INTERVALO_MILISSEGUNDOS / 1000}s linear`;
+        progressBar.style.width = '100%';
+    });
+}
+
+function iniciarIntervalo() {
+    // Limpa qualquer timer existente
+    if (intervaloTimer) clearInterval(intervaloTimer);
+    
+    // Inicia o timer e o progresso
+    intervaloTimer = setInterval(proximaLei, INTERVALO_MILISSEGUNDOS);
+    iniciarProgressBar();
+    estaPausado = false;
+    
+    // Atualiza o botão para "Pausar" (vermelho)
+    btnPlayPause.innerHTML = '<i class="fas fa-pause"></i> Pausar';
+    btnPlayPause.classList.remove('play');
+}
+
+function pausarIntervalo() {
+    clearInterval(intervaloTimer);
+    estaPausado = true;
+    
+    // Pausa a animação da barra de progresso via CSS
+    progressBar.style.width = getComputedStyle(progressBar).width; // Congela a largura atual
+    progressBar.style.transition = 'none';
+    
+    // Atualiza o botão para "Continuar" (verde)
+    btnPlayPause.innerHTML = '<i class="fas fa-play"></i> Continuar';
+    btnPlayPause.classList.add('play');
+}
+
+function reiniciarIntervalo() {
+    if (!estaPausado) {
+        iniciarIntervalo();
+    }
+}
+
+// --- 3. Carregamento dos Dados e Inicialização ---
+
+async function carregarDados() {
+    try {
+        tituloElemento.textContent = "Carregando...";
+        
+        // Faz a requisição ao novo arquivo JSON
+        const response = await fetch('dados.json');
+        leisImportantes = await response.json();
+        
+        if (leisImportantes.length > 0) {
+            // Inicia o carrossel com o primeiro item
+            exibirLei(0);
+            iniciarIntervalo(); 
+        } else {
+            tituloElemento.textContent = "Erro: Lista de leis vazia.";
+        }
+    } catch (error) {
+        console.error("Erro ao carregar os dados:", error);
+        tituloElemento.textContent = "Erro ao carregar os dados.";
+        textoElemento.textContent = "Verifique se o arquivo 'dados.json' existe e está formatado corretamente.";
+        linkElemento.style.display = 'none'; // Esconde o link
+    }
+}
+
+// --- 4. Event Listeners (Botões) ---
+
+document.getElementById('btn-proximo').addEventListener('click', proximaLei);
+document.getElementById('btn-anterior').addEventListener('click', leiAnterior);
+
+btnPlayPause.addEventListener('click', () => {
+    if (estaPausado) {
+        iniciarIntervalo();
+    } else {
+        pausarIntervalo();
+    }
+});
+
+// Inicializa o projeto
+carregarDados();
