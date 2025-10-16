@@ -8,11 +8,18 @@ let estaPausado = false;
 const tituloElemento = document.getElementById('lei-titulo');
 const textoElemento = document.getElementById('lei-texto');
 const linkElemento = document.getElementById('lei-link');
+const ramoElemento = document.getElementById('lei-ramo'); // Novo
 const cardElemento = document.getElementById('display-lei');
 const progressBar = document.getElementById('progress-bar');
 const btnPlayPause = document.getElementById('btn-play-pause');
+const btnAleatorio = document.getElementById('btn-aleatorio'); // Novo
 
 // --- 1. Funções de Exibição e Navegação ---
+
+function formatarRamo(ramo) {
+    // Remove acentos e espaços para uso em classes CSS
+    return 'ramo-' + ramo.toLowerCase().replace(/á/g, 'a').replace(/é/g, 'e').replace(/\s/g, '-');
+}
 
 function exibirLei(indice) {
     if (!leisImportantes.length) return;
@@ -25,13 +32,22 @@ function exibirLei(indice) {
     cardElemento.style.opacity = 0;
 
     setTimeout(() => {
-        // Atualiza o conteúdo
+        // 1. Atualiza o Conteúdo
         tituloElemento.textContent = lei.titulo;
         textoElemento.textContent = lei.texto;
         linkElemento.href = lei.link;
+        
+        // 2. Atualiza Categoria (Ramo)
+        ramoElemento.textContent = lei.ramo.toUpperCase();
+        ramoElemento.className = 'lei-badge ' + formatarRamo(lei.ramo);
+
+        // 3. Exibe o Card
         cardElemento.style.opacity = 1;
         
-        // Reinicia a barra de progresso se não estiver pausado
+        // 4. (Futura Melhoria: Permalinks) Atualiza a URL com o ID
+        history.pushState(null, '', `#${lei.id}`);
+
+        // 5. Reinicia a barra de progresso se não estiver pausado
         if (!estaPausado) {
             iniciarProgressBar();
         }
@@ -49,6 +65,18 @@ function leiAnterior() {
     reiniciarIntervalo();
 }
 
+function leiAleatoria() {
+    // Garante que a lei atual não seja a mesma
+    let novoIndice;
+    do {
+        novoIndice = Math.floor(Math.random() * leisImportantes.length);
+    } while (novoIndice === indiceAtual && leisImportantes.length > 1);
+
+    exibirLei(novoIndice);
+    reiniciarIntervalo();
+}
+
+
 // --- 2. Controle do Timer e Pausa ---
 
 function iniciarProgressBar() {
@@ -64,15 +92,12 @@ function iniciarProgressBar() {
 }
 
 function iniciarIntervalo() {
-    // Limpa qualquer timer existente
     if (intervaloTimer) clearInterval(intervaloTimer);
     
-    // Inicia o timer e o progresso
     intervaloTimer = setInterval(proximaLei, INTERVALO_MILISSEGUNDOS);
     iniciarProgressBar();
     estaPausado = false;
     
-    // Atualiza o botão para "Pausar" (vermelho)
     btnPlayPause.innerHTML = '<i class="fas fa-pause"></i> Pausar';
     btnPlayPause.classList.remove('play');
 }
@@ -81,11 +106,10 @@ function pausarIntervalo() {
     clearInterval(intervaloTimer);
     estaPausado = true;
     
-    // Pausa a animação da barra de progresso via CSS
-    progressBar.style.width = getComputedStyle(progressBar).width; // Congela a largura atual
+    // Congela a barra de progresso
+    progressBar.style.width = getComputedStyle(progressBar).width; 
     progressBar.style.transition = 'none';
     
-    // Atualiza o botão para "Continuar" (verde)
     btnPlayPause.innerHTML = '<i class="fas fa-play"></i> Continuar';
     btnPlayPause.classList.add('play');
 }
@@ -100,15 +124,22 @@ function reiniciarIntervalo() {
 
 async function carregarDados() {
     try {
-        tituloElemento.textContent = "Carregando...";
-        
-        // Faz a requisição ao novo arquivo JSON
         const response = await fetch('dados.json');
         leisImportantes = await response.json();
         
         if (leisImportantes.length > 0) {
-            // Inicia o carrossel com o primeiro item
-            exibirLei(0);
+            // Verifica se há um ID na URL para carregar uma lei específica
+            const hashId = window.location.hash.substring(1);
+            let indiceInicial = 0;
+
+            if (hashId) {
+                const indiceHash = leisImportantes.findIndex(lei => lei.id === hashId);
+                if (indiceHash !== -1) {
+                    indiceInicial = indiceHash;
+                }
+            }
+
+            exibirLei(indiceInicial);
             iniciarIntervalo(); 
         } else {
             tituloElemento.textContent = "Erro: Lista de leis vazia.";
@@ -117,7 +148,7 @@ async function carregarDados() {
         console.error("Erro ao carregar os dados:", error);
         tituloElemento.textContent = "Erro ao carregar os dados.";
         textoElemento.textContent = "Verifique se o arquivo 'dados.json' existe e está formatado corretamente.";
-        linkElemento.style.display = 'none'; // Esconde o link
+        linkElemento.style.display = 'none'; 
     }
 }
 
@@ -125,6 +156,7 @@ async function carregarDados() {
 
 document.getElementById('btn-proximo').addEventListener('click', proximaLei);
 document.getElementById('btn-anterior').addEventListener('click', leiAnterior);
+document.getElementById('btn-aleatorio').addEventListener('click', leiAleatoria); // Novo
 
 btnPlayPause.addEventListener('click', () => {
     if (estaPausado) {
