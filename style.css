@@ -76,6 +76,41 @@ main {
     transition: opacity 0.5s ease-in-out; /* Transição para o JS */
 }
 
+/* Novo: Estilo do Ramo/Categoria */
+#lei-ramo {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* Cores por Ramo */
+.ramo-Constitucional { background-color: #e74c3c; }
+.ramo-Administrativo { background-color: #3498db; }
+.ramo-Penal { background-color: #9b59b6; }
+.ramo-Tributário { background-color: #f39c12; }
+.ramo-Civil { background-color: #2ecc71; }
+.ramo-Trabalho { background-color: #1abc9c; }
+.ramo-Consumidor { background-color: #e67e22; }
+.ramo-Processual { background-color: #2c3e50; }
+.ramo-Estatutário { background-color: #7f8c8d; }
+.ramo-Previdenciário { background-color: #3498db; }
+.ramo-Digital { background-color: #8e44ad; }
+.ramo-Empresarial { background-color: #2980b9; }
+.ramo-Eleitoral { background-color: #7f8c8d; }
+.ramo-Regulatório { background-color: #16a085; }
+.ramo-Ambiental { background-color: #27ae60; }
+.ramo-Saúde { background-color: #c0392b; }
+.ramo-Processual-Penal { background-color: #2c3e50; }
+.ramo-Processual-Civil { background-color: #2c3e50; }
+.ramo-Processual-Federal { background-color: #2c3e50; }
+
+
 #lei-titulo {
     color: #34495e;
     font-size: 2em;
@@ -127,10 +162,14 @@ main {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.nav-btn:active {
+    transform: scale(0.98);
 }
 
 #btn-anterior, #btn-proximo {
@@ -155,6 +194,15 @@ main {
     filter: brightness(1.1);
 }
 
+/* Novo: Botão Aleatório */
+#btn-aleatorio {
+    background-color: #f39c12; /* Amarelo Laranja */
+    color: white;
+}
+
+#btn-aleatorio:hover {
+    background-color: #e67e22;
+}
 
 /* --- Estilo do Rodapé --- */
 footer {
