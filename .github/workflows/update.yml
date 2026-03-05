@@ -1,0 +1,27 @@
+name: Atualizar Leis com IA
+on:
+  push:
+    paths:
+      - 'dados.json' # Sempre que você adicionar uma lei nova no JSON, a IA roda
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar Python e Gemini
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-generativeai
+      - name: Rodar Script de IA
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python main.py
+      - name: Salvar Mudanças no Site
+        run: |
+          git config --global user.name 'IA-Gabinete-Bot'
+          git config --global user.email 'bot@github.com'
+          git add index.html
+          git commit -m "Site atualizado com insights da IA" || exit 0
+          git push
