@@ -1,53 +1,49 @@
 import google.generativeai as genai
 import feedparser
 import os
-from bs4 import BeautifulSoup
 
-# 1. Configuração da IA (Pegando a chave que você salvou nos Secrets)
+# 1. Configuração da IA
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def buscar_fontes_juridicas():
-    # Fontes: Câmara (Projetos/Leis) e STF (Jurisprudência)
     urls = [
-        "https://www.camara.leg.br/rss/noticias",
-        "https://portal.stf.jus.br/noticias/rss.asp"
+        "[https://www.camara.leg.br/rss/noticias](https://www.camara.leg.br/rss/noticias)",
+        "[https://portal.stf.jus.br/noticias/rss.asp](https://portal.stf.jus.br/noticias/rss.asp)"
     ]
     texto_consolidado = ""
     for url in urls:
         feed = feedparser.parse(url)
-        for entry in feed.entries[:5]: # Pega as 5 mais recentes de cada
+        for entry in feed.entries[:5]:
             texto_consolidado += f"Título: {entry.title}\nResumo: {entry.summary}\n\n"
     return texto_consolidado
 
 def processar_com_ia(conteudo):
     prompt = f"""
-    Você é um assistente jurídico de alto nível para Murilo Feitosa, Diretor de Gabinete Criminal.
-    Analise estas notícias:
-    {conteudo}
-
+    Você é um assistente jurídico para Murilo Feitosa, Diretor de Gabinete Criminal.
+    Analise estas notícias: {conteudo}
     Tarefa:
-    1. Filtre apenas o que for relevante para Direito Penal, Processo Penal ou Organização Judiciária.
-    2. Se houver algo relevante, crie um card HTML usando Bootstrap.
-    3. No card, inclua um 'Insight do Gabinete' explicando a importância prática daquela norma ou decisão.
-    4. Se não houver nada relevante, retorne apenas: '<p class="text-muted">Sem atualizações legislativas relevantes nas últimas horas.</p>'
-    
-    Retorne apenas o código HTML, sem blocos de markdown (```html).
+    1. Filtre apenas o que for relevante para Direito Penal ou Processo Penal.
+    2. Crie cards HTML usando as classes CSS: 'card-ia'.
+    3. No card, inclua o título da notícia e um 'Insight do Gabinete'.
+    Retorne apenas o HTML, sem as tags ```html.
     """
     response = model.generate_content(prompt)
-    return response.text
+    texto = response.text
+    # Limpeza de segurança para evitar que o markdown da IA apareça no site
+    return texto.replace("```html", "").replace("```", "").strip()
 
 def atualizar_index(novo_conteudo):
     with open("index.html", "r", encoding="utf-8") as f:
         html_antigo = f.read()
 
-    # O script procura por esta tag no seu HTML e substitui pelo conteúdo novo
+    # O marcador deve ser EXATAMENTE o que está no seu index.html
     marcador = ""
     
-    # Mantém o marcador para a próxima atualização
-    partes = html_antigo.split(marcador)
-    if len(partes) > 1:
-        novo_html = partes[0] + marcador + "\n" + novo_conteudo + "\n" + partes[1].split(marcador)[-1]
+    if marcador in html_antigo:
+        partes = html_antigo.split(marcador)
+        # Monta o HTML preservando os marcadores para a próxima rodada
+        novo_html = partes[0] + marcador + "\n" + novo_conteudo + "\n" + marcador + partes[2]
         
         with open("index.html", "w", encoding="utf-8") as f:
             f.write(novo_html)
