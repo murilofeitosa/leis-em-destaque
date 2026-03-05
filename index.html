@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurisprudência em Destaque</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+Pro:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com design premium -->
+    <header class="header-premium">
+        <div class="header-content">
+            <div class="header-badge">
+                <i class="fas fa-scales"></i>
+                <span>Sistema Jurídico</span>
+            </div>
+            <h1 class="header-title">Jurisprudência <span class="highlight-text">em Destaque</span></h1>
+            <p class="header-subtitle">Constituição e Leis da 1ª Vara Criminal de Tauá</p>
+            <p class="header-description">Explore disposições legais importantes atualizadas a cada 30 segundos</p>
+        </div>
+        <div class="header-decoration"></div>
+    </header>
+
+    <!-- Painel de IA com cards modernos -->
+    <section class="ai-panel">
+        <div class="ai-container">
+            <div class="ai-header">
+                <div class="ai-icon"><i class="fas fa-robot"></i></div>
+                <div class="ai-info">
+                    <h3>Radar Jurídico Automático</h3>
+                    <p>Atualização em tempo real via IA</p>
+                </div>
+            </div>
+            <div id="painel-ia-content" class="ai-content">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Carregando disposições legais...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content com card de lei -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- Barra de progresso animada -->
+            <div class="progress-section">
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar-fill"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="lei-counter" class="lei-counter">Lei 1 de N</span>
+                    <span class="progress-time">30 segundos</span>
+                </div>
+            </div>
+
+            <!-- Card principal da lei -->
+            <div id="display-lei" class="lei-card-premium">
+                <div class="lei-card-header">
+                    <span id="lei-ramo" class="lei-badge-premium">Carregando...</span>
+                    <button id="btn-bookmark" class="bookmark-btn" title="Salvar lei">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+
+                <div class="lei-card-body">
+                    <h2 id="lei-titulo" class="lei-title">Carregando disposição legal...</h2>
+                    
+                    <div class="lei-meta">
+                        <span id="lei-ano" class="meta-item">
+                            <i class="fas fa-calendar"></i> <span id="lei-ano-valor">—</span>
+                        </span>
+                        <span id="lei-tipo" class="meta-item">
+                            <i class="fas fa-file-alt"></i> <span id="lei-tipo-valor">—</span>
+                        </span>
+                    </div>
+
+                    <p id="lei-texto" class="lei-text">Aguarde, buscando o texto importante da lei...</p>
+
+                    <div class="lei-footer">
+                        <a id="lei-link" href="#" target="_blank" class="btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Ver Íntegra no Planalto
+                        </a>
+                        <button id="btn-copy" class="btn-secondary" title="Copiar texto">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles de navegação -->
+            <div class="navigation-section">
+                <div class="nav-controls">
+                    <button id="btn-anterior" class="nav-btn nav-prev" title="Lei anterior">
+                        <i class="fas fa-chevron-left"></i>
+                        <span>Anterior</span>
+                    </button>
+                    
+                    <button id="btn-aleatorio" class="nav-btn nav-random" title="Lei aleatória">
+                        <i class="fas fa-dice"></i>
+                        <span>Aleatória</span>
+                    </button>
+                    
+                    <button id="btn-play-pause" class="nav-btn nav-play-pause" title="Pausar/Retomar">
+                        <i class="fas fa-pause"></i>
+                        <span id="play-pause-text">Pausar</span>
+                    </button>
+                    
+                    <button id="btn-proximo" class="nav-btn nav-next" title="Próxima lei">
+                        <span>Próxima</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Info secundária -->
+                <div class="nav-info">
+                    <button id="btn-lista" class="info-btn" title="Ver lista completa">
+                        <i class="fas fa-list"></i> Lista Completa
+                    </button>
+                    <button id="btn-settings" class="info-btn" title="Configurações">
+                        <i class="fas fa-cog"></i> Configurações
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de confirmação de cópia -->
+    <div id="toast-notification" class="toast-notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Texto copiado com sucesso!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-content">
+            <p><strong>Projeto:</strong> Jurisprudência em Destaque</p>
+            <p><strong>Desenvolvido por:</strong> Murilo Feitosa | Rodando via GitHub Pages</p>
+            <p class="footer-version"><small>Versão 2.0 Redesenho - 2025</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
